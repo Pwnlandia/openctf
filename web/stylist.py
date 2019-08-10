@@ -13,4 +13,9 @@ with open("/home/brady/Downloads/stylist.html") as f:
             item = [n, h]
             items.append(item)
     items.sort(key=lambda tup: tup[0])
-    print(items)
+
+    flag = ""
+    for i in items:
+        flag = flag + chr(int(i[1], 16))
+    print(flag)
+
